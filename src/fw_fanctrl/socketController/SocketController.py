@@ -6,7 +6,7 @@ from fw_fanctrl.exception.UnimplementedException import UnimplementedException
 class SocketController(ABC):
     @abstractmethod
     def start_server_socket(self, command_callback=None):
-        raise UnimplementedException()
+        raise  UnimplementedException()
 
     @abstractmethod
     def stop_server_socket(self):
