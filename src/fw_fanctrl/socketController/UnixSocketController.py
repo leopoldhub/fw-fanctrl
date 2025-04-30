@@ -86,7 +86,7 @@ class UnixSocketController(SocketController, ABC):
         try:
             client_socket.connect(COMMANDS_SOCKET_FILE_PATH)
             client_socket.sendall(command.encode("utf-8"))
-            received_data = b""
+            received_data =  b""
             while True:
                 data_chunk = client_socket.recv(1024)
                 if not data_chunk:
